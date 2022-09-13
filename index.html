@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>not-ok.computer</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+    <meta name="description" content="like ok, but not">
+
+    <meta property="og:url" content="https://not-ok.computer/">
+    <meta property="og:title" content="not ok dot computer">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://not-ok.computer/img/preview.png">
+    <meta property="og:image:alt"
+          content="A heart shaped integrated circuit on a circuit board, on the chip is written 'not-ok dot computer' in a pixellated font">
+    <meta property="og:site_name" content="not-ok.computer">
+
+    <meta name="twitter:text:title" content="not-ok.computer">
+    <meta name="twitter:title" content="not-ok.computer">
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@HBeckPDX"/>
+    <meta name="twitter:creator" content="@HBeckPDX"/>
+    <meta name="twitter:image" content="https://not-ok.computer/img/preview.png">
+    <meta name="twitter:image:alt"
+          content="A heart shaped integrated circuit on a circuit board, on the chip is written 'not-ok dot computer' in a pixellated font">
+
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            display: grid;
+            grid-template-areas: "c";
+            transition: background-color 1s linear;
+        }
+
+        #icon {
+            grid-area: c;
+            place-self: center;
+            width: 90vw;
+            height: auto;
+            transition: opacity 1s linear;
+        }
+
+        .transparent {
+            opacity: 0;
+        }
+
+        .opaque {
+            opacity: 100%;
+        }
+
+        .bgStart {
+            background-color: #777777;
+        }
+
+        .bgBlack {
+            background-color: black;
+        }
+
+        .bgWhite {
+            background-color: white
+        }
+
+        .bgCircuit {
+            background-color: #023300;
+        }
+
+        .bgGears {
+            background-color: #0034A5;
+        }
+
+        .bgHearts {
+            background-color: #FF00BE;
+        }
+
+        .bgMac {
+            background-color: #EBEBEB;
+        }
+
+        .bgRainbow {
+            background-color: #62E0FF;
+        }
+
+        .bgSkyline {
+            background-color: #00052F;
+        }
+
+        .bgSpin {
+            background-color: #000841;
+        }
+
+        .bgTerminal {
+            background-color: #272727;
+        }
+
+    </style>
+</head>
+<body id="body" class="bgStart">
+<img id="icon" class="transparent" src="" alt="">
+</body>
+<footer>
+    <script>
+        const images = [
+            {
+                img: 'img/not-ok-computer-circuit.svg',
+                bg: "bgCircuit",
+                alt: "A heart shaped integrated circuit on a circuit board, on the chip is written 'not-ok dot computer' in a pixelated font"
+            },
+            {
+                img: "img/not-ok-computer-burning-heart.svg",
+                bg: "bgBlack",
+                alt: "A red 3D heart with a halo of fire around it above 'not ok dot computer' in a curling decorative font"
+            },
+            {
+                img: "img/not-ok-computer-clock.svg",
+                bg: "bgWhite",
+                alt: "An analog clock, but instead of numbers around the edge is 'not ok dot computer'"
+            },
+            {
+                img: "img/not-ok-computer-drip.svg",
+                bg: "bgWhite",
+                alt: "A solid black bar with drips falling both down and up. Through the bar in a dripping font is 'not ok dot computer"
+            },
+            {
+                img: "img/not-ok-computer-gears.svg",
+                bg: "bgGears",
+                alt: "The words 'not ok dot computer' with the o in each replaced with an interlocking gear. Other letters are in a machine-like font"
+            },
+            {
+                img: "img/not-ok-computer-hearts.svg",
+                bg: "bgHearts",
+                alt: "Concentric pink and purple hearts around 'not ok dot computer' in a bubbly font with heart shaped holes"
+            },
+            {
+                img: "img/not-ok-computer-mac.svg",
+                bg: "bgMac",
+                alt: "A little dead computer icon from the early mac days with 'not ok dot computer' in the early mac font"
+            },
+            {
+                img: "img/not-ok-computer-rainbow-letters.svg",
+                bg: "bgBlack",
+                alt: "'not ok dot computer' in stacked rainbow letters"
+            },
+            {
+                img: "img/not-ok-computer-rainbow.svg",
+                bg: "bgRainbow",
+                alt: "'not ok dot computer' on a cartoon rainbow between two clouds"
+            },
+            {
+                img: "img/not-ok-computer-skyline.svg",
+                bg: "bgSkyline",
+                alt: "'not ok dot computer' on a skyline, with each word vertical in a skyscraper"
+            },
+            {
+                img: "img/not-ok-computer-speech-bubbles.svg",
+                bg: "bgBlack",
+                alt: "'not ok dot computer' with each word in its own speech bubble"
+            },
+            {
+                img: "img/not-ok-computer-spin.svg",
+                bg: "bgSpin",
+                alt: "A design with many bending arms stroked unevenly with 'not ok dot computer' in the center"
+            },
+            {
+                img: "img/not-ok-computer-spiral.svg",
+                bg: "bgBlack",
+                alt: "A large spiral of the words 'not ok dot computer' with the same in the center"
+            },
+            {
+                img: "img/not-ok-computer-terminal.svg",
+                bg: "bgTerminal",
+                alt: "'not ok dot computer' in negative space cut out of a design that's the same words as if it was an old green terminal"
+            }
+        ];
+
+        const imageToDisplay = images[Math.floor(Math.random() * images.length)]
+
+        const body = document.getElementById("body")
+        const img = document.getElementById("icon")
+        img.setAttribute("alt", imageToDisplay.alt)
+        img.onload = () => {
+            body.classList.remove("bgStart")
+            body.classList.add(imageToDisplay.bg)
+            img.classList.add("opaque")
+            img.classList.remove("transparent")
+        }
+        img.setAttribute("src", imageToDisplay.img)
+    </script>
+</footer>
+</html>
