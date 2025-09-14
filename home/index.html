@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>not-ok.computer</title>
+    <link rel="icon" type="image/x-icon" href="/home/img/favicon.png">
+    <meta name="description" content="like ok, but not">
+
+    <meta property="og:url" content="https://not-ok.computer/">
+    <meta property="og:title" content="not ok dot computer">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://not-ok.computer/img/preview.png">
+    <meta property="og:image:alt"
+          content="A heart shaped integrated circuit on a circuit board, on the chip is written 'not-ok dot computer' in a pixellated font">
+    <meta property="og:site_name" content="not-ok.computer">
+
+    <meta name="twitter:text:title" content="not-ok.computer">
+    <meta name="twitter:title" content="not-ok.computer">
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@HBeckPDX"/>
+    <meta name="twitter:creator" content="@HBeckPDX"/>
+    <meta name="twitter:image" content="https://not-ok.computer/img/preview.png">
+    <meta name="twitter:image:alt"
+          content="A heart shaped integrated circuit on a circuit board, on the chip is written 'not-ok dot computer' in a pixellated font">
+
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            display: grid;
+            grid-template-areas: "c";
+            transition: background-color 1s linear;
+            background-color: #777777;
+        }
+        button {
+            width: 100px
+        }
+
+        #icon {
+            grid-area: c;
+            place-self: center;
+            width: 90vw;
+            height: auto;
+            transition: opacity 1s linear;
+        }
+
+    </style>
+    <script>
+        window.noc = {}
+
+        window.noc.themes = [{
+            "img": "img/not-ok-computer-circuit.svg",
+            "backgroundColor": "#023300",
+            "alt": "A heart shaped integrated circuit on a circuit board, on the chip is written 'not-ok dot computer' in a pixelated font",
+            "textColor": "#e0c200"
+        }, {
+            "img": "img/not-ok-computer-burning-heart.svg",
+            "backgroundColor": "#000000",
+            "alt": "A red 3D heart with a halo of fire around it above 'not ok dot computer' in a curling decorative font",
+            "textColor": "#fafa34"
+        }, {
+            "img": "img/not-ok-computer-clock.svg",
+            "backgroundColor": "#FFFFFF",
+            "alt": "An analog clock, but instead of numbers around the edge is 'not ok dot computer'",
+            "textColor": "#212385"
+        }, {
+            "img": "img/not-ok-computer-gears.svg",
+            "backgroundColor": "#0034A5",
+            "alt": "The words 'not ok dot computer' with the o in each replaced with an interlocking gear. Other letters are in a machine-like font",
+            "textColor": "#fe17ea"
+        }, {
+            "img": "img/not-ok-computer-hearts.svg",
+            "backgroundColor": "#FF00BE",
+            "alt": "Concentric pink and purple hearts around 'not ok dot computer' in a bubbly font with heart shaped holes",
+            "textColor": "#edffc7"
+        }, {
+            "img": "img/not-ok-computer-spin.svg",
+            "backgroundColor": "#000841",
+            "alt": "A design with many bending arms stroked unevenly with 'not ok dot computer' in the center",
+            "textColor": "#ffffff"
+        }, {
+            "img": "img/not-ok-computer-speech-bubbles.svg",
+            "backgroundColor": "#000000",
+            "alt": "'not ok dot computer' with each word in its own speech bubble",
+            "textColor": "#ffffff"
+        }, {
+            "img": "img/not-ok-computer-mac.svg",
+            "backgroundColor": "#EBEBEB",
+            "alt": "A little dead computer icon from the early mac days with 'not ok dot computer' in the early mac font"
+        }, {
+            "img": "img/not-ok-computer-drip.svg",
+            "backgroundColor": "#FFFFFF",
+            "alt": "A solid black bar with drips falling both down and up. Through the bar in a dripping font is 'not ok dot computer"
+        }, {
+            "img": "img/not-ok-computer-rainbow-letters.svg",
+            "backgroundColor": "#000000",
+            "alt": "'not ok dot computer' in stacked rainbow letters",
+            "textColor": "#ffffff"
+        }, {
+            "img": "img/not-ok-computer-rainbow.svg",
+            "backgroundColor": "#62E0FF",
+            "alt": "'not ok dot computer' on a cartoon rainbow between two clouds",
+            "textColor": "#ffffff"
+        }, {
+            "img": "img/not-ok-computer-molotov.svg",
+            "backgroundColor": "#000000",
+            "alt": "A molotov cocktail with 'not ok dot computer' on the bottle label in a balloon like font",
+            "textColor": "#ffffff"
+        }, {
+            "img": "img/not-ok-computer-skyline.svg",
+            "backgroundColor": "#00052F",
+            "alt": "'not ok dot computer' on a skyline, with each word vertical in a skyscraper",
+            "textColor": "#f2d673"
+        }, {
+            "img": "img/not-ok-computer-spiral.svg",
+            "backgroundColor": "#000000",
+            "alt": "A large spiral of the words 'not ok dot computer' with the same in the center",
+            "textColor": "#ffffff"
+        }, {
+            "img": "img/not-ok-computer-terminal.svg",
+            "backgroundColor": "#272727",
+            "alt": "'not ok dot computer' in negative space cut out of a design that's the same words as if it was an old green terminal",
+            "textColor": "#13ec22"
+        }, {
+            "img": "img/not-ok-computer-antifa.svg",
+            "backgroundColor": "#FFFFFF",
+            "alt": "An outer black circle containing 'not ok dot computer' in white around two mac computer icons, one in black, the other red offset and slightly overlapping",
+            "textColor": "#000000"
+        }, {
+            "img": "img/not-ok-computer-chaos.svg",
+            "backgroundColor": "#FF00F0",
+            "alt": "A chaos symbol of arrows pointed outward in 8 cardinal and half-cardinal directions. inside it is 'not ok dot computer'",
+            "textColor": "#22103c"
+        }, {
+            "img": "img/not-ok-computer-goose.svg",
+            "backgroundColor": "#000000",
+            "alt": "A goose looking across its body at the viewer, in the crook between its neck and body is 'not ok dot computer'",
+            "textColor": "#ffffff"
+        }, {
+        //     "img": "img/not-ok-computer-graffiti.svg",
+        //     "backgroundColor": "#9B0000",
+        //     "alt": "In a graffiti font is 'not ok dot computer' over a brick wall. There's a crown over the c in computer",
+        //     "textColor": "#fad1ff"
+        // }, {
+        //     "img": "img/not-ok-computer-raccoon.svg",
+        //     "backgroundColor": "#FFFFFF",
+        //     "alt": "A raccoon sitting in front of a computer, looking back at the viewer. On the screen in a monospace font is 'not ok dot computer'"
+        // }, {
+            "img": "img/not-ok-computer-union.svg",
+            "backgroundColor": "#FFFFFF",
+            "alt": "A union emblem with 'not ok dot computer local 500' around the outside in a smallcaps font, in the center are crossed torches over mac happy computer and sad computer icons"
+        }, {
+            "img": "img/not-ok-computer-cati.svg",
+            "backgroundColor": "#000000",
+            "alt": "At the top a star over a keyboard over 'not ok dot computer'",
+            "textColor": "#ffffff"
+        }]
+
+        function setImage(idx) {
+            window.noc.currIdx = idx
+            console.log(idx)
+            const theme = window.noc.themes[idx]
+            const body = document.getElementById("body")
+            const img = document.getElementById("icon")
+            // let setter = document.getElementById("color")
+            // let text = document.getElementById("text")
+
+            img.setAttribute("alt", theme.alt)
+            img.onload = () => {
+                body.style.backgroundColor = theme.backgroundColor
+                // text.style.color = theme.textColor || "#000000"
+                // setter.value = theme.textColor || "#000000"
+                img.style.opacity = "1"
+            }
+            img.setAttribute("src", theme.img)
+        }
+    </script>
+    <script>
+        function setTextColor() {
+            let setter = document.getElementById("color")
+            let text = document.getElementById("text")
+
+            text.style.color = setter.value
+            console.log(setter.value, JSON.stringify(setter.value))
+            window.noc.themes[window.noc.currIdx].textColor = setter.value;
+        }
+    </script>
+</head>
+<body id="body" onclick="setImage((window.noc.currIdx + 1) % window.noc.themes.length);">
+<img id="icon" style="opacity: 0" src="" alt="">
+<!--<label for="color">Color</label>-->
+<!--<input id="color" type="color" oninput="setTextColor()">-->
+<!--<div id="text">-->
+<!--    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna-->
+<!--    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.-->
+<!--    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur-->
+<!--    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
+<!--</div>-->
+<!--<button onclick="setImage((window.noc.currIdx + 1) % window.noc.themes.length);">-->
+<!--    Next-->
+<!--</button>-->
+</body>
+<footer>
+    <script>
+        if (!window.noc.currIdx) {
+            setImage(Math.floor(Math.random() * window.noc.themes.length))
+        }
+    </script>
+</footer>
+</html>
